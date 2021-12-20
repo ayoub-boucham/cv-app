@@ -38,8 +38,8 @@
 
         {{-- </td> --}}
         <div class="col col-3">
-          <div class="card" style="width: 18rem;">
-              <img class="card-img-top" src="{{asset('storage/'.$cv->image)}}" alt="Card image cap">
+          <div class="card" style="width: 18rem;height:400px">
+              <img class="card-img-top" height="250px" src="{{asset('storage/'.$cv->image)}}" alt="Card image cap">
               <div class="card-body">
                 <h5 class="card-title">{{$cv->titre}}</h5>
                 <p class="card-text">{{Str::words($cv->presentation,5,'...')}}</p>

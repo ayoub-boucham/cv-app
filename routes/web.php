@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CvController;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+//CV
 Route::get('/', [CvController::class,'index']);
 Route::get('cvs', [CvController::class,'index']);
 Route::get('cvs/details/{id}', [CvController::class,'details']);
@@ -23,7 +26,10 @@ Route::get('cvs/{id}/edit', [CvController::class,'edit']);
 Route::post('cvs/{id}', [CvController::class,'update']);
 Route::get('cvs/{id}', [CvController::class,'destroy']);
 
-
+//Profile
+Route::get('profile', [ProfileController::class,'index']);
+Route::get('profile/{id}/edit/', [ProfileController::class,'edit']);
+Route::get('profile/{id}', [ProfileController::class,'update']);
 
 Auth::routes();
 

@@ -49,6 +49,7 @@ class CvController extends Controller
         $cv = CV::find($id);
         $cv->titre = $request->input('titre');
         $cv->presentation = $request->input('presentation');
+        $cv->image = $request->file('image')->store('images');
         $cv->save();
         return redirect('cvs');
     }
